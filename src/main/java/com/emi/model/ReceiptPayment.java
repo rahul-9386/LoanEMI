@@ -12,11 +12,12 @@ import java.time.LocalDateTime;
  * @version 1.0
  */
 @Entity
-@Table(name = "LMS_RECEIPTPAYMENT_DTL")
+@Table(name = "LMS_RECEIPTPAYMENT_DTL_POOJA")
 public class ReceiptPayment {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "receipt_seq")
+    @SequenceGenerator(name = "receipt_seq", sequenceName = "LMS_RECEIPTPAYMENT_SEQ_POOJA", allocationSize = 1)
     @Column(name = "id")
     private Long id;
 
