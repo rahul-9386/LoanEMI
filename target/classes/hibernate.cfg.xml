@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <!-- Database connection settings -->
+        <property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+        <property name="hibernate.connection.url">jdbc:oracle:thin:@localhost:1521:xe</property>
+        <property name="hibernate.connection.username">my_oracle_username</property>
+        <property name="hibernate.connection.password">my_oracle_password</property>
+
+        <!-- Hibernate dialect for Oracle -->
+        <property name="hibernate.dialect">org.hibernate.dialect.Oracle12cDialect</property>
+
+        <!-- Schema generation settings -->
+        <property name="hibernate.hbm2ddl.auto">validate</property>
+
+        <!-- Show SQL queries in console -->
+        <property name="hibernate.show_sql">true</property>
+
+        <!-- Format SQL queries for better readability -->
+        <property name="hibernate.format_sql">true</property>
+
+        <!-- Connection pool settings -->
+        <property name="hibernate.connection.pool_size">10</property>
+        <property name="hibernate.connection.autocommit">false</property>
+
+        <!-- C3P0 connection pool settings (optional) -->
+        <property name="hibernate.c3p0.min_size">5</property>
+        <property name="hibernate.c3p0.max_size">20</property>
+        <property name="hibernate.c3p0.timeout">300</property>
+        <property name="hibernate.c3p0.max_statements">50</property>
+        <property name="hibernate.c3p0.idle_test_period">3000</property>
+
+        <!-- Second level cache settings (optional) -->
+        <property name="hibernate.cache.use_second_level_cache">false</property>
+        <property name="hibernate.cache.use_query_cache">false</property>
+
+        <!-- Statistics (optional, for development) -->
+        <property name="hibernate.generate_statistics">false</property>
+    </session-factory>
+</hibernate-configuration>
