@@ -12,11 +12,12 @@ import java.time.LocalDateTime;
  * @version 1.0
  */
 @Entity
-@Table(name = "LMS_ALLOCATION_DTL")
+@Table(name = "LMS_ALLOCATION_DTL_POOJA")
 public class Allocation {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "allocation_seq")
+    @SequenceGenerator(name = "allocation_seq", sequenceName = "ALLOCATION_SEQ_POOJA", allocationSize = 1)
     @Column(name = "id")
     private Long id;
 
