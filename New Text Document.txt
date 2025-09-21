@@ -70,3 +70,4 @@ INSERT INTO LMS_RECEIVABLEPAYBLE_DTL (loan_account_no, emi_amount, penalty, tota
 INSERT INTO LMS_RECEIVABLEPAYBLE_DTL (loan_account_no, emi_amount, penalty, total_amount, created_date) VALUES ('LN1009', 3500.00, 400.00, 3900.00, SYSTIMESTAMP);
 INSERT INTO LMS_RECEIVABLEPAYBLE_DTL (loan_account_no, emi_amount, penalty, total_amount, created_date) VALUES ('LN1010', 6500.00, 75.00, 6575.00, SYSTIMESTAMP);
 
+CREATE SEQUENCE RECEIVABLE_SEQ START WITH 1 INCREMENT BY 1 NOCACHE NOCYCLE;
