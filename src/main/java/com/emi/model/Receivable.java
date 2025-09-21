@@ -16,7 +16,12 @@ import java.time.LocalDateTime;
 public class Receivable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "receivable_seq")
+    @SequenceGenerator(
+            name = "receivable_seq",
+            sequenceName = "RECEIVABLE_SEQ", // Oracle sequence name
+            allocationSize = 1
+    )
     @Column(name = "id")
     private Long id;
 
