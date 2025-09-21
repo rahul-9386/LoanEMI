@@ -12,16 +12,12 @@ import java.time.LocalDateTime;
  * @version 1.0
  */
 @Entity
-@Table(name = "LMS_RECEIVABLEPAYBLE_DTL")
+@Table(name = "LMS_RECEIVABLEPAYBLE_DTL_POOJA")
 public class Receivable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "receivable_seq")
-    @SequenceGenerator(
-            name = "receivable_seq",
-            sequenceName = "RECEIVABLE_SEQ", // Oracle sequence name
-            allocationSize = 1
-    )
+    @SequenceGenerator(name = "receivable_seq", sequenceName = "RECEIVABLE_SEQ_POOJA", allocationSize = 1)
     @Column(name = "id")
     private Long id;
 
